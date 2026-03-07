@@ -197,7 +197,31 @@ To download MELD parameters (fsaverage_sym surfaces, etc.) via upstream:
 python -c "from meld_graph.download_data import get_meld_params; get_meld_params()"
 ```
 
-### 2.2 rs-fMRI model I/O contract (what `cache_root` must contain)
+### 2.2 rs-fMRI preprocessing and feature construction (brief protocol)
+
+The end-to-end rs-fMRI branch assumes the following processing path (aligned with the manuscript; MRIQC/fMRIPrep/XCP-D [28-30], Brainnetome [31], empirical-Bayes FC stabilization [32]):
+
+1) **Preprocessing/QC stack**:
+   - run MRIQC for quality assessment;
+   - preprocess structural/functional data with fMRIPrep;
+   - run XCP-D denoising with nuisance regression, band-pass filtering (`0.01-0.08 Hz`), and motion censoring (`framewise displacement > 0.3 mm`).
+
+2) **Regional rs-fMRI scalar features**:
+   - derive `ALFF`, smoothed `ALFF`, `ReHo`, `PerAF`, and `BOLD log-variance` from denoised rs-fMRI time series;
+   - convert each feature to z-score space (`ALFF (z)`, smoothed `ALFF (z)`, `ReHo (z)`, `PerAF (z)`, `BOLD log-variance (z)`), with normalization parameters fit on the training partition within each fold and applied to validation/test data in that fold.
+
+3) **Whole-brain FC matrix**:
+   - parcellate signals with Brainnetome Atlas parcels;
+   - compute parcel-by-parcel Pearson correlation and apply Fisher z-transform;
+   - for short clinical rs-fMRI (~5 min), optional empirical-Bayes shrinkage can be applied to FC with shrinkage hyperparameters estimated on the training partition only within each fold.
+
+4) **Feature assembly for model input**:
+   - use the FC matrix (or FC row embeddings) as the main graph features;
+   - use the regional scalar z-features as local auxiliary features (`L_loc`) for dual-expert/laterality models.
+
+This release does not bundle raw MRIQC/fMRIPrep/XCP-D workflows; users should generate these derivatives in their own environment and then export model-ready caches as described below.
+
+### 2.3 rs-fMRI model I/O contract (what `cache_root` must contain)
 
 All rs-fMRI training/inference scripts in `scripts/end_to_end/` operate on a **precomputed graph cache root**:
 
@@ -225,7 +249,7 @@ Important: **Late fusion (paper implementation) assumes the Brainnetome cortical
 the “S26/V2” ordering described in `paper/supplement_methods/SUPPLEMENTARY_METHODS_trackA_gate.md`. If you use a
 different atlas or node schema, you will need to adapt `scripts/end_to_end/run_trackA_v2_fmrihemi_takeover_three_level_eval.py`.
 
-### 2.3 rs-fMRI lesion model — training (optional) and inference
+### 2.4 rs-fMRI lesion model — training (optional) and inference
 
 #### Train (single fold)
 
@@ -273,7 +297,7 @@ python scripts/end_to_end/predict_deepez_gcn.py \
   --out_dir /path/to/v2_dir/fold_00/val_predictions
 ```
 
-### 2.4 rs-fMRI laterality model (for Late fusion) — training and inference
+### 2.5 rs-fMRI laterality model (for Late fusion) — training and inference
 
 Late fusion requires an rs-fMRI-only laterality CSV per fold with columns:
 `subject_id, prob_right, pred_hemi`.
@@ -306,7 +330,7 @@ python scripts/end_to_end/predict_deepez_laterality.py \
   --device cuda:0
 ```
 
-### 2.5 Model weights (optional)
+### 2.6 Model weights (optional)
 
 Paper weights are distributed as **external downloads** (not committed in this repo). See:
 - `weights/README.md`
@@ -318,7 +342,7 @@ bash weights/download_weights.sh
 sha256sum -c weights/checksums.sha256
 ```
 
-If you do not download weights, you can still run end-to-end by training models yourself (Sections 2.3–2.4).
+If you do not download weights, you can still run end-to-end by training models yourself (Sections 2.4–2.5).
 
 ---
 
@@ -333,9 +357,9 @@ To run Late fusion **as implemented in the paper**, you need (per fold):
 2) **Fold split JSONs**:
    - a `data_parameters.json` per fold containing `train_ids`/`val_ids`
 3) **rs-fMRI laterality CSVs**:
-   - `subject_id, prob_right, pred_hemi` per fold (Section 2.4)
+   - `subject_id, prob_right, pred_hemi` per fold (Section 2.5)
 4) **rs-fMRI lesion probabilities**:
-   - per-subject `.npz` with `p` under `v2_dir/fold_XX/val_predictions/` (Section 2.3)
+   - per-subject `.npz` with `p` under `v2_dir/fold_XX/val_predictions/` (Section 2.4)
 5) **Lesion labels (for evaluation)**:
   - `--lesion_root` pointing to MELD-style derived lesion labels (fsaverage_sym/xhemi-on-lh space).
 
