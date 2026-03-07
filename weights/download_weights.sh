@@ -27,7 +27,7 @@ fi
 # or:
 #   export ZENODO_BASE_URL="https://zenodo.org/records/1234567/files"
 #
-GITHUB_REPO="${GITHUB_REPO:-MeiShuhao-Huashan/MELD_fMRI}"
+GITHUB_REPO="${GITHUB_REPO:-MeiShuhao-Huashan/fMRI_MELD_epilepsia}"
 GITHUB_RELEASE_TAG="${GITHUB_RELEASE_TAG:-}"
 GITHUB_BASE_URL="${GITHUB_BASE_URL:-}"
 
@@ -77,6 +77,13 @@ download_one() {
 # By default, download the rs-fMRI weights required for end-to-end inference + TrackA.
 download_one "fmri_models.tar.gz"
 download_one "laterality_models.tar.gz"
+
+# Optional: also download T1-only (MELD_graph) weights to run T1 inference yourself.
+# Enable with:
+#   export DOWNLOAD_T1=1
+if [ "${DOWNLOAD_T1:-0}" = "1" ]; then
+  download_one "t1_models.tar.gz"
+fi
 
 echo
 echo "DONE. Next:"

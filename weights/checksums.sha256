@@ -1,2 +1,3 @@
-# Populate this file after uploading weights, e.g. (from repo root):
-#   sha256sum weights/downloaded/*.tar.gz > weights/checksums.sha256
+6dee446a41781f2186eaea41b9efa38b0b063f209751f5b37510bbd0e7d8d217  weights/downloaded/fmri_models.tar.gz
+6505192b20f19fed8ba80e9c391b1ffec66c24d3b067acb008d20c308d74dfb3  weights/downloaded/laterality_models.tar.gz
+50b4c351816c230387e7c1e11feaa46b61a10067b3bd680e060184ae8d25a569  weights/downloaded/t1_models.tar.gz
