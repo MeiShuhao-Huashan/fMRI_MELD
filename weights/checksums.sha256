@@ -1,0 +1,2 @@
+# Populate this file after uploading weights, e.g. (from repo root):
+#   sha256sum weights/downloaded/*.tar.gz > weights/checksums.sha256

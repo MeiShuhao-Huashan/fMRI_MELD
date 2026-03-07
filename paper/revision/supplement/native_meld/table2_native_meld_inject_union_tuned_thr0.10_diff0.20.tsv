@@ -1,0 +1,18 @@
+PANEL	Index test	No output n/N (%)	Resected=Yes in ILAE 1–2 n/N (%)	Resected=Yes in ILAE 3–6 n/N (%)	Adjusted aOR	95% CI	p
+boxDSC>0.22	MELD (native)	16/58 (27.6%)	11/38 (28.9%)	4/20 (20.0%)	1.56	[0.448, 6.17]	0.2533
+boxDSC>0.22	rs-fMRI	0/58 (0.0%)	17/38 (44.7%)	1/20 (5.0%)	12.5	[2.49, 133]	0.0006
+boxDSC>0.22	Intersection	47/58 (81.0%)	0/38 (0.0%)	0/20 (0.0%)	NA	NA	NA
+boxDSC>0.22	TrackA (fusion, inject/union tuned)	0/58 (0.0%)	22/38 (57.9%)	3/20 (15.0%)	7.06	[1.99, 32.5]	0.0010
+PPV>=0.5	MELD (native)	16/58 (27.6%)	20/38 (52.6%)	3/20 (15.0%)	6.13	[1.72, 28.6]	0.0024
+PPV>=0.5	rs-fMRI	0/58 (0.0%)	8/38 (21.1%)	0/20 (0.0%)	8.4	[0.893, 1.12e+03]	0.0587
+PPV>=0.5	Intersection	47/58 (81.0%)	8/38 (21.1%)	0/20 (0.0%)	17.0	[1.61, 2.4e+03]	0.0111
+PPV>=0.5	TrackA (fusion, inject/union tuned)	0/58 (0.0%)	21/38 (55.3%)	2/20 (10.0%)	7.67	[2.03, 42.2]	0.0011
+pinpointing	MELD (native)	16/58 (27.6%)	20/38 (52.6%)	4/20 (20.0%)	4.18	[1.27, 16.4]	0.0099
+pinpointing	rs-fMRI	0/58 (0.0%)	10/38 (26.3%)	1/20 (5.0%)	4.34	[0.859, 43.6]	0.0556
+pinpointing	Intersection	47/58 (81.0%)	8/38 (21.1%)	0/20 (0.0%)	17.0	[1.61, 2.4e+03]	0.0111
+pinpointing	TrackA (fusion, inject/union tuned)	0/58 (0.0%)	22/38 (57.9%)	3/20 (15.0%)	6.61	[1.9, 29.5]	0.0013
+PANEL	Index test	PPV median [IQR] in ILAE 1–2	PPV median [IQR] in ILAE 3–6	Mann–Whitney p	Adjusted OR per 0.1 PPV	95% CI	p
+ppv_continuous	MELD (native)	0.719 [0.000, 0.999]	0.000 [0.000, 0.154]	0.0278	1.19	[1.04, 1.39]	0.0004
+ppv_continuous	rs-fMRI	0.017 [0.000, 0.390]	0.000 [0.000, 0.000]	0.0018	1.6	[1.1, 3.27]	0.0007
+ppv_continuous	Intersection	0.000 [0.000, 0.000]	0.000 [0.000, 0.000]	0.0297	1.33	[1.05, 2.18]	0.0009
+ppv_continuous	TrackA (fusion, inject/union tuned)	0.611 [0.047, 0.993]	0.000 [0.000, 0.045]	9.6e-05	1.3	[1.1, 1.6]	4.9e-05

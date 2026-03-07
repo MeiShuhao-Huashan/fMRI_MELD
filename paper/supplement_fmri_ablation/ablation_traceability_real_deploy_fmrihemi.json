@@ -1,0 +1,80 @@
+{
+  "ablations": [
+    {
+      "id": "B2a",
+      "eval_dir": "meld_data/output/three_level_eval/v2_gat3_diceproxy_deploy_real_fmrihemi_a30_t80"
+    },
+    {
+      "id": "B2b",
+      "eval_dir": "meld_data/output/three_level_eval/v2_ablation_b2b_deploy_real_fmrihemi_a30_t80"
+    },
+    {
+      "id": "B2c",
+      "eval_dir": "meld_data/output/three_level_eval/v2_ablation_b2c_deploy_real_fmrihemi_a30_t80"
+    },
+    {
+      "id": "B2d",
+      "eval_dir": "meld_data/output/three_level_eval/v2_ablation_b2d_deploy_real_fmrihemi_a30_t80"
+    },
+    {
+      "id": "B3",
+      "eval_dir": "meld_data/output/three_level_eval/v2_ablation_b3_deploy_real_fmrihemi_a30_t80"
+    },
+    {
+      "id": "B4",
+      "eval_dir": "meld_data/output/three_level_eval/v2_ablation_b4_deploy_real_fmrihemi_a30_t80"
+    },
+    {
+      "id": "B6",
+      "eval_dir": "meld_data/output/three_level_eval/v2_ablation_b6_k4_deploy_real_fmrihemi_a30_t80"
+    },
+    {
+      "id": "B7",
+      "eval_dir": "meld_data/output/three_level_eval/v2_ablation_b7_k12_deploy_real_fmrihemi_a30_t80"
+    },
+    {
+      "id": "B8",
+      "eval_dir": "meld_data/output/three_level_eval/v2_ablation_b8_macroap_deploy_real_fmrihemi_a30_t80"
+    },
+    {
+      "id": "A1",
+      "eval_dir": "meld_data/output/three_level_eval/v2_arch_a1_topk4_fmrihemi_a30_t80"
+    },
+    {
+      "id": "A2",
+      "eval_dir": "meld_data/output/three_level_eval/v2_arch_a2_groupfc_top5_fmrihemi_a30_t80"
+    },
+    {
+      "id": "A3",
+      "eval_dir": "meld_data/output/three_level_eval/v2_arch_a3_groupfc_top10_fmrihemi_a30_t80"
+    },
+    {
+      "id": "A4",
+      "eval_dir": "meld_data/output/three_level_eval/v2_arch_a4_noEB_fmrihemi_a30_t80"
+    },
+    {
+      "id": "A5",
+      "eval_dir": "meld_data/output/three_level_eval/v2_arch_a5_balancedsoftmax_fmrihemi_a30_t80"
+    },
+    {
+      "id": "A6",
+      "eval_dir": "meld_data/output/three_level_eval/v2_arch_a6_gcn2_fmrihemi_a30_t80"
+    },
+    {
+      "id": "A7",
+      "eval_dir": "meld_data/output/three_level_eval/v2_arch_a7_gat2_fmrihemi_a30_t80"
+    },
+    {
+      "id": "A8",
+      "eval_dir": "meld_data/output/three_level_eval/v2_arch_a8_gcn3_fmrihemi_a30_t80"
+    },
+    {
+      "id": "A10a",
+      "eval_dir": "meld_data/output/three_level_eval/v2_arch_a10_gat4_fmrihemi_a30_t80"
+    },
+    {
+      "id": "A10b",
+      "eval_dir": "meld_data/output/three_level_eval/v2_arch_a10_gcn4_fmrihemi_a30_t80"
+    }
+  ]
+}

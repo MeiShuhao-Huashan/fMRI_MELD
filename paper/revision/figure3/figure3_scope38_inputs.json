@@ -1,0 +1,22 @@
+{
+  "audit_json": "paper/revision/table3/final/table3_scope38_audit.json",
+  "scope_subjects_tsv": "paper/revision/table3/final/table3_scope38_subject_ids.tsv",
+  "meta_csv": "supplement_table_hs_patient_three_level_metrics.filled.csv",
+  "eval_dirs": {
+    "t1": "meld_data/output/three_level_eval/revision2026_clinical_response_trackAplus20_SELF5F/meld_native_surface",
+    "fmri": "meld_data/output/three_level_eval/revision2026_clinical_response_trackAplus20_SELF5F/fmri_parcelavg",
+    "trackA": "meld_data/output/three_level_eval/revision2026_clinical_response_trackAplus20_SELF5F/trackA_locked_paper_plus20"
+  },
+  "endpoint": "detected_boxdsc (boxDSC>0.22 & Dice>0.01)",
+  "ci_methods": {
+    "rate": "Wilson",
+    "delta_by_location": "paired bootstrap (n_boot=10000, seed=20260209)"
+  },
+  "outputs": {
+    "panelA_pdf": "paper/revision/figure3/panelA_detectability_scope38.pdf",
+    "panelB_pdf": "paper/revision/figure3/panelB_complementarity_scope38.pdf",
+    "panelC_pdf": "paper/revision/figure3/panelC_seeg_scope38.pdf",
+    "panelD_pdf": "paper/revision/figure3/panelD_location_delta_scope38.pdf",
+    "panelE_pdf": "paper/revision/figure3/panelE_intermediate_vs_difficult_scope38.pdf"
+  }
+}

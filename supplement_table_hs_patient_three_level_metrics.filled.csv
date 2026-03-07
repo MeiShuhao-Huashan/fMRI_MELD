@@ -1,0 +1,73 @@
+subject_id,Sex,AgeAtSurgery_years,EpilepsyDuration_years,SeizureFrequency,SEEG,Histopathology,DominantResectionCavityLocation_EZproxy,MRIDetectability,Prognosis(ILAE),FollowUp_years,LesionSide,PostopImagingForMask,rsfMRI_meanFD,rsfMRI_censorRatio,rsfMRI_standardizedRetainedTime_min_(5.26min*retained_std240/240),rsfMRI_retainedVolumes
+sub-90b92bd52af88118,Male,17,0.333,Daily,Yes,FCD IIb,Frontal,Difficult,1,1.317,Left,Postop MRI,0.474571,0.416667,3.068,140
+sub-d1c0983f86951cd3,Female,35,20.0,Monthly,Yes,FCD IIa,Frontal,Difficult,2,1.161,Left,Postop MRI,0.247439,0.304167,3.66,167
+sub-a272f08d33dac8e5,Female,18,16.0,Daily,Yes,FCD IIb,Multilobar,Easy,1,4.419,Left,Postop MRI,0.1447,0.004167,5.238,239
+sub-a67594f68292c5c1,Female,5,1.0,Daily,No,FCD IIb,Central,Easy,1,1.161,Right,Postop MRI,0.216952,0.208333,4.164,190
+sub-5b7d276917444690,Male,18,4.0,Monthly,Yes,FCD IIa,Parietal,Intermediate,1,4.534,Left,Postop MRI,0.139837,0.008333,5.216,238
+sub-313f1d0c8e4e3cc5,Male,13,7.0,Monthly,Yes,Nonspecific,Insular/Peri-insular (incl. operculum),Difficult,2,3.083,Right,Postop MRI,0.106181,0.004167,5.238,239
+sub-4693ce77d2d51c7c,Female,14,1.0,Monthly,Yes,FCD IIa,Frontal,Intermediate,1,3.198,Left,Postop MRI,0.242193,0.2625,3.879,177
+sub-1ebd819ee1997ae4,Male,26,1.0,Weekly,No,FCD IIb,Frontal,Easy,1,5.938,Right,Postop CT,0.146101,0.091667,4.778,218
+sub-a39d5447a671e3e9,Male,34,9.0,Monthly,Yes,Nonspecific,Temporal,Difficult,1,2.081,Left,Postop CT,0.220757,0.154167,4.449,203
+sub-4214dcd0bdfedee0,Male,19,2.0,Monthly,Yes,FCD IIb,Multilobar,Difficult,1,1.218,Right,Postop MRI,0.154043,0.025,5.128,234
+sub-78cd95bf52a5f4c3,Male,38,1.0,Daily,No,FCD IIb,Central,Easy,1,1.563,Right,Postop MRI,0.230544,0.225,4.077,186
+sub-88c0770da85fbcc4,Female,27,6.0,Daily,Yes,Nonspecific,Multilobar,Difficult,6,1.443,Right,Postop MRI,0.085994,0.0,5.26,240
+sub-018fe0ff7e02d226,Male,21,18.0,Weekly,Yes,FCD IIa,Frontal,Intermediate,1,5.377,Left,Postop CT,0.153189,0.066667,4.909,224
+sub-21abd0799375b3c2,Male,33,10.0,Monthly,Yes,FCD I,Multilobar,Difficult,1,2.209,Right,Postop MRI,0.158612,0.0375,5.063,231
+sub-6c7db2653c7af48c,Male,27,1.0,Monthly,Yes,FCD IIa,Occipital,Easy,1,2.349,Right,Postop MRI,0.149931,0.025,5.128,234
+sub-cdd2aca1aee37271,Male,34,10.0,Weekly,Yes,Nonspecific,Multilobar,Easy,1,4.994,Left,Postop MRI,0.09628,0.004167,5.238,239
+sub-3d02878a7d66f088,Male,13,3.0,Weekly,Yes,FCD IIa,Parietal,Difficult,1,5.344,Right,Postop MRI,0.107471,0.020833,5.15,235
+sub-96cfccb34513af55,Male,17,1.0,Weekly,No,Nonspecific,Cingulate,Intermediate,1,1.851,Right,Postop MRI,0.173277,0.066667,4.909,224
+sub-35ba0a7edcfdac7d,Male,17,12.0,Monthly,No,FCD IIb,Frontal,Intermediate,1,3.269,Left,Postop CT,0.245948,0.329167,3.529,161
+sub-bce72effcde4dbd6,Female,17,3.0,Monthly,No,FCD IIb,Parietal,Easy,1,5.785,Right,Postop MRI,0.054447,0.0,5.26,240
+sub-79448e78b0ee8dc5,Male,35,22.0,Monthly,Yes,FCD IIa,Temporal,Intermediate,1,1.238,Left,Postop MRI,0.173153,0.058333,4.953,226
+sub-8d0cf6e1d8d1310b,Female,32,19.0,Daily,Yes,Nonspecific,Temporal,Difficult,5,3.159,Right,Postop MRI,0.217308,0.125,4.603,210
+sub-8840e64b19375335,Male,19,15.0,Monthly,Yes,FCD IIb,Frontal,Intermediate,1,0.956,Left,Postop MRI,0.118843,0.037143,5.065,674
+sub-0513d40b62f9192c,Female,22,16.0,Monthly,Yes,FCD IIa,Parietal,Difficult,1,1.185,Left,Postop MRI,0.166553,0.0375,5.063,231
+sub-ab654ec70f0be369,Male,22,5.0,Weekly,No,FCD IIa,Temporal,Easy,1,2.374,Left,Postop MRI,0.193108,0.108333,4.69,214
+sub-313b80f65c6d9f65,Male,27,14.0,Monthly,Yes,FCD IIa,Multilobar,Difficult,2,2.308,Right,Postop MRI,0.243923,0.270833,3.835,175
+sub-6e23005a1afa27a1,Male,10,9.0,Monthly,No,Nonspecific,Multilobar,Intermediate,1,2.546,Right,Postop MRI,0.171261,0.06,4.944,188
+sub-af505aa7b152ec64,Male,16,16.0,Monthly,No,FCD IIa,Occipital,Easy,1,1.941,Right,Postop MRI,0.320825,0.420833,3.046,139
+sub-6892bc44d8b65637,Male,39,20.0,Daily,Yes,FCD IIb,Parietal,Easy,1,2.62,Left,Postop MRI,0.179648,0.058333,4.953,226
+sub-5125aef3def35b2f,Male,15,4.0,Monthly,Yes,FCD IIb,Temporal,Difficult,1,2.409,Left,Postop MRI,0.166326,0.045833,5.019,229
+sub-bfc9bb71f4ffff50,Male,27,10.0,Monthly,No,Polymicrogyria (PMG),Frontal,Easy,1,2.527,Right,Postop MRI,0.157684,0.0375,5.063,231
+sub-11b89fc7bf2fb572,Female,46,33.0,Monthly,Yes,FCD IIb,Frontal,Intermediate,1,2.094,Left,Postop MRI,0.23428,0.1875,4.274,195
+sub-06935058a1597d05,Male,13,6.0,Daily,Yes,FCD IIa,Central,Difficult,1,1.177,Left,Postop MRI,0.217426,0.175,4.339,165
+sub-ae3fe1a4a998c926,Female,18,15.0,Weekly,Yes,FCD IIb,Multilobar,Difficult,1,1.276,Right,Postop MRI,0.190882,0.070833,4.887,223
+sub-e0d219f4aabe99fb,Male,15,1.0,Weekly,Yes,Nonspecific,Frontal,Difficult,1,2.16,Right,Postop MRI,0.19366,0.1,4.734,216
+sub-807190128e9b98eb,Female,21,12.0,Monthly,Yes,Encephalomalacia,Frontal,Intermediate,1,1.32,Right,Postop MRI,0.142319,0.008333,5.216,238
+sub-f6dee9bc1e60a282,Male,29,20.0,Daily,Yes,Nonspecific,Frontal,Intermediate,1,1.895,Right,Postop MRI,0.154308,0.02,5.155,196
+sub-4811156f52f75f3a,Female,28,12.0,Monthly,No,Nonspecific,Parietal,Easy,1,1.021,Right,Postop MRI,0.234411,0.25,3.945,180
+sub-27ce7ce54b59b768,Female,19,6.0,Monthly,Yes,Nonspecific,Insular/Peri-insular (incl. operculum),Difficult,1,1.914,Left,Postop MRI,0.117463,0.020833,5.15,235
+sub-d041faf6d512673e,Male,25,10.0,Daily,Yes,Encephalomalacia,Parietal,Difficult,1,4.827,Left,Postop MRI,0.082544,0.0,5.26,240
+sub-9d3a509e649ea8fb,Female,25,21.0,Weekly,Yes,FCD IIb,Insular/Peri-insular (incl. operculum),Intermediate,1,5.344,Right,Postop CT,0.135889,0.004167,5.238,239
+sub-1a478e36f3b3dc1c,Male,30,23.0,Monthly,Yes,FCD IIa,Temporal,Difficult,1,4.52,Right,Postop MRI,0.271617,0.291667,3.726,170
+sub-31a870683b1dccbb,Male,14,12.0,Daily,Yes,FCD IIa,Cingulate,Difficult,1,4.156,Right,Postop MRI,0.113698,0.0,5.26,240
+sub-37d16c233630a6c5,Male,29,18.0,Monthly,Yes,Nonspecific,Occipital,Difficult,1,3.633,Right,Postop MRI,0.138736,0.0125,5.194,237
+sub-9b228146210ba2fd,Female,16,1.0,Monthly,Yes,Nonspecific,Occipital,Difficult,1,2.7,Right,Postop MRI,0.230288,0.2125,4.142,189
+sub-6edd439e8e6c0b37,Male,16,4.0,Monthly,Yes,FCD IIa,Multilobar,Difficult,1,3.228,Left,Postop MRI,0.138666,0.058333,4.953,226
+sub-4bf860da4040fb4e,Male,36,17.0,Daily,Yes,FCD IIa,Insular/Peri-insular (incl. operculum),Difficult,1,2.669,Left,Postop MRI,0.151006,0.025,5.128,234
+sub-3876acdf254a1bae,Female,26,14.0,Monthly,No,Nonspecific,Frontal,Easy,1,2.574,Left,Postop CT,0.178586,0.033333,5.085,232
+sub-464bb5d7fc05d087,Male,25,23.0,Monthly,Yes,FCD IIa,Parietal,Difficult,2,1.848,Right,Postop MRI,0.140269,0.016667,5.172,236
+sub-538635a1d0cd21c3,Male,16,10.0,Weekly,Yes,Nonspecific,Parietal,Difficult,1,5.043,Right,Postop MRI,0.188191,0.095833,4.756,217
+sub-f0fa8434d2b0421d,Female,20,2.0,Monthly,Yes,Encephalomalacia,Central,Easy,1,5.44,Right,Postop CT,0.120384,0.0125,5.194,711
+sub-e3e87c9a7ac60f6a,Male,19,14.0,Weekly,Yes,Nonspecific,Insular/Peri-insular (incl. operculum),Difficult,1,3.907,Right,Postop MRI,0.151956,0.045833,5.019,229
+sub-48d3884fb74a5df1,Female,23,2.0,Daily,No,Nonspecific,Occipital,Intermediate,1,4.808,Right,Postop CT,0.192572,0.025,5.128,234
+sub-4b194d465de35c67,Male,17,12.0,Weekly,No,FCD IIb,Frontal,Difficult,1,3.006,Left,Postop MRI,0.101625,0.0,5.26,240
+sub-6d5c62a89c162964,Male,35,10.0,Weekly,Yes,Nonspecific,Insular/Peri-insular (incl. operculum),Difficult,4,4.036,Right,Postop MRI,0.218205,0.145833,4.493,205
+sub-b5a7994cf122bbdb,Female,23,10.0,Monthly,Yes,FCD IIa,Multilobar,Intermediate,4,5.07,Right,Postop MRI,0.155196,0.075,4.865,222
+sub-7ad4a4d17cee4115,Male,37,11.0,Monthly,Yes,Nonspecific,Multilobar,Difficult,3,4.381,Left,Postop MRI,0.196081,0.0375,5.063,231
+sub-422e87ddac61b1f6,Female,27,21.0,Daily,Yes,FCD IIa,Multilobar,Difficult,5,3.704,Right,Postop MRI,0.140904,0.0,5.26,240
+sub-3f4d3f6b30d51f21,Female,17,3.0,Weekly,Yes,FCD IIa,Frontal,Difficult,4,4.413,Left,Postop MRI,0.120629,0.016667,5.172,236
+sub-10b041c346274d54,Male,18,1.0,Monthly,Yes,FCD IIa,Occipital,Intermediate,4,4.192,Left,Postop MRI,0.108643,0.0125,5.194,237
+sub-01eb91bd6701f8ab,Male,8,4.0,Monthly,Yes,FCD IIa,Insular/Peri-insular (incl. operculum),Difficult,3,4.227,Left,Postop MRI,0.211279,0.166667,4.383,200
+sub-9e72a10d19966a01,Male,14,7.0,Weekly,Yes,FCD IIa,Parietal,Difficult,3,4.214,Left,Postop MRI,0.149564,0.0375,5.063,231
+sub-069a4957498bc2d2,Male,23,11.0,Monthly,Yes,FCD IIa,Frontal,Difficult,6,3.94,Right,Postop MRI,0.196905,0.133333,4.559,208
+sub-802bd84aa8a51c0e,Female,16,13.0,Daily,Yes,Nonspecific,Insular/Peri-insular (incl. operculum),Difficult,4,3.693,Left,Postop MRI,0.176912,0.083333,4.822,220
+sub-38dc53ec721fa450,Female,18,8.0,Daily,Yes,FCD IIb,Frontal,Intermediate,4,3.647,Right,Postop MRI,0.136873,0.008333,5.216,238
+sub-00381dd030f5bb82,Male,18,14.0,Weekly,Yes,FCD IIa,Frontal,Intermediate,4,3.236,Right,Postop MRI,0.084432,0.0,5.26,240
+sub-ed6f3e8bd689f2f0,Female,39,34.0,Weekly,Yes,Nonspecific,Insular/Peri-insular (incl. operculum),Difficult,6,2.93,Left,Postop MRI,0.077254,0.0,5.26,240
+sub-2ca9f36882affb93,Female,21,15.0,Weekly,Yes,FCD IIa,Frontal,Intermediate,3,2.661,Left,Postop CT,0.337908,0.445833,2.915,133
+sub-ff0cb8f8ea6ecabf,Female,33,27.0,Monthly,Yes,FCD IIa,Parietal,Difficult,4,2.475,Left,Postop MRI,0.219943,0.120833,4.624,211
+sub-5e47f902a737c136,Male,26,10.0,Daily,Yes,Encephalomalacia,Multilobar,Difficult,4,2.218,Left,Postop MRI,0.265482,0.395833,3.178,145
+sub-2bbe61459dd8ea4b,Female,29,18.0,Daily,Yes,Nonspecific,Insular/Peri-insular (incl. operculum),Difficult,5,2.029,Right,Postop MRI,0.262131,0.270833,3.835,175
+sub-eabcee7a411d2128,Male,40,26.0,Weekly,Yes,FCD IIa,Frontal,Difficult,5,1.927,Left,Postop MRI,0.173751,0.0375,5.063,231

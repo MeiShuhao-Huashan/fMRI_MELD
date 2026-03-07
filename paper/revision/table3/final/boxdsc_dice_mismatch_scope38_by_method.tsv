@@ -1,0 +1,6 @@
+method	subject_id	lesion_dice_union	max_box_dice	detected_boxdsc	n_clusters
+MELD_self_unconstrained	sub-313f1d0c8e4e3cc5	0.0088083195999318	0.2349631332714524	True	1
+TrackA_paper_plus20	sub-8840e64b19375335	0.0	0.2461622993097582	True	1
+TrackA_paper_plus20	sub-e3e87c9a7ac60f6a	0.0086874607494243	0.3068934221457246	True	2
+TrackA_paper_plus20	sub-48d3884fb74a5df1	0.0342935906271536	0.2403683680827108	True	2
+rs-fMRI	sub-e3e87c9a7ac60f6a	0.0086874607494243	0.3068934221457246	True	2

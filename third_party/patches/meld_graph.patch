@@ -1,0 +1,36 @@
+diff --git a/meld_graph/paths.py b/meld_graph/paths.py
+index 35668e1..fc151e5 100644
+--- a/meld_graph/paths.py
++++ b/meld_graph/paths.py
+@@ -6,10 +6,14 @@ from configparser import ConfigParser, NoOptionError, NoSectionError
+ # get scripts dir (parent dir of dir that this file is in)
+ SCRIPTS_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ # read config file from scripts_dir
+-config_fname = os.path.join(SCRIPTS_DIR, 'meld_config.ini')
++config_fname = os.environ.get("MELD_CONFIG_INI", os.path.join(SCRIPTS_DIR, "meld_config.ini"))
+ config = ConfigParser()
+ config.read(config_fname)
+ 
++_env_meld_data_path = os.environ.get("MELD_DATA_PATH", "").strip()
++if _env_meld_data_path:
++    config["DEFAULT"]["meld_data_path"] = _env_meld_data_path
++
+ try:
+     MELD_DATA_PATH = config.get('DEFAULT', 'meld_data_path')
+     print(f'Setting MELD_DATA_PATH to {MELD_DATA_PATH}')
+@@ -37,7 +41,7 @@ except (NoOptionError, NoSectionError) as e:
+     FS_SUBJECTS_PATH = ""
+ try:
+     MELD_PARAMS_PATH = config.get('develop', 'meld_params_path')
+-    print(f'Setting BASE_PATH to {MELD_PARAMS_PATH}')
++    print(f'Setting MELD_PARAMS_PATH to {MELD_PARAMS_PATH}')
+ except (NoOptionError, NoSectionError) as e:
+     print(f"No meld_params_path defined in {config_fname}!")
+     MELD_PARAMS_PATH = ""
+@@ -80,4 +84,4 @@ def load_config(config_file):
+     spec = importlib.util.spec_from_loader(loader.name, loader)
+     config = importlib.util.module_from_spec(spec)
+     loader.exec_module(config)
+-    return config
+\ No newline at end of file
++    return config

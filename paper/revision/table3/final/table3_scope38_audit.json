@@ -1,0 +1,29 @@
+{
+  "scope": {
+    "definition": "paper52 \u2229 MRIDetectability{intermediate,difficult} \u2229 ILAE{1,2}",
+    "n": 38,
+    "meta_csv": "supplement_table_hs_patient_three_level_metrics.filled.csv",
+    "paper_table2_csv": "paper/table2/table2_source_data.csv"
+  },
+  "inputs": {
+    "t1_eval_dir": "meld_data/output/three_level_eval/revision2026_clinical_response_trackAplus20_SELF5F/meld_native_surface",
+    "fmri_eval_dir": "meld_data/output/three_level_eval/revision2026_clinical_response_trackAplus20_SELF5F/fmri_parcelavg",
+    "tracka_eval_dir": "meld_data/output/three_level_eval/revision2026_clinical_response_trackAplus20_SELF5F/trackA_locked_paper_plus20"
+  },
+  "params": {
+    "n_boot": 10000,
+    "seed": 20260209,
+    "n_perm": 20000,
+    "boxdsc_min_cluster_dice": 0.01,
+    "p_adjust": "holm3_fdr_bh"
+  },
+  "out_md": "paper/revision/table3/final/table3_source_scope38_final.md",
+  "labels": {
+    "t1_name": "T1-only",
+    "fmri_name": "fMRI-only (fMRIhemi B2a)",
+    "tracka_name": "Track A (T1+fMRI)",
+    "delta_label": "\u0394 (Track A (T1+fMRI) \u2212 T1-only)",
+    "p_label": "p (Track A (T1+fMRI) vs T1-only)",
+    "constraints_note": null
+  }
+}

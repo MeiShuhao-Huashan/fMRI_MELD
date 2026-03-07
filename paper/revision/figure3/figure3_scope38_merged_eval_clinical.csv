@@ -1,0 +1,39 @@
+subject_id,detected_boxdsc_t1,pinpointed_t1,detected_boxdsc_fmri,pinpointed_fmri,detected_boxdsc_trackA,pinpointed_trackA,MRIDetectability,SEEG,DominantResectionCavityLocation_EZproxy
+sub-018fe0ff7e02d226,True,True,False,False,True,True,Intermediate,Yes,Frontal
+sub-0513d40b62f9192c,False,False,False,False,False,False,Difficult,Yes,Parietal
+sub-06935058a1597d05,False,False,False,False,False,False,Difficult,Yes,Central
+sub-11b89fc7bf2fb572,True,True,True,False,True,True,Intermediate,Yes,Frontal
+sub-1a478e36f3b3dc1c,False,False,True,True,True,True,Difficult,Yes,Temporal
+sub-21abd0799375b3c2,False,False,True,False,True,False,Difficult,Yes,Multilobar
+sub-27ce7ce54b59b768,False,False,True,True,True,True,Difficult,Yes,Insular/Peri-insular (incl. operculum)
+sub-313b80f65c6d9f65,True,True,False,False,True,True,Difficult,Yes,Multilobar
+sub-313f1d0c8e4e3cc5,False,False,False,False,False,False,Difficult,Yes,Insular/Peri-insular (incl. operculum)
+sub-31a870683b1dccbb,True,True,True,True,True,True,Difficult,Yes,Cingulate
+sub-35ba0a7edcfdac7d,True,True,False,False,True,True,Intermediate,No,Frontal
+sub-37d16c233630a6c5,True,True,False,False,False,False,Difficult,Yes,Occipital
+sub-3d02878a7d66f088,True,True,False,False,True,True,Difficult,Yes,Parietal
+sub-4214dcd0bdfedee0,True,True,False,False,True,True,Difficult,Yes,Multilobar
+sub-464bb5d7fc05d087,False,True,True,True,True,True,Difficult,Yes,Parietal
+sub-4693ce77d2d51c7c,True,True,False,False,True,True,Intermediate,Yes,Frontal
+sub-48d3884fb74a5df1,False,False,True,False,True,False,Intermediate,No,Occipital
+sub-4b194d465de35c67,True,True,True,False,True,True,Difficult,No,Frontal
+sub-4bf860da4040fb4e,True,True,False,False,True,True,Difficult,Yes,Insular/Peri-insular (incl. operculum)
+sub-5125aef3def35b2f,True,False,False,False,True,False,Difficult,Yes,Temporal
+sub-538635a1d0cd21c3,False,False,False,False,False,False,Difficult,Yes,Parietal
+sub-5b7d276917444690,True,True,False,False,True,True,Intermediate,Yes,Parietal
+sub-6e23005a1afa27a1,True,True,False,False,True,True,Intermediate,No,Multilobar
+sub-6edd439e8e6c0b37,False,True,True,True,True,True,Difficult,Yes,Multilobar
+sub-79448e78b0ee8dc5,True,False,True,True,True,False,Intermediate,Yes,Temporal
+sub-807190128e9b98eb,True,True,True,False,True,True,Intermediate,Yes,Frontal
+sub-8840e64b19375335,False,False,False,False,False,False,Intermediate,Yes,Frontal
+sub-90b92bd52af88118,False,False,False,False,False,False,Difficult,Yes,Frontal
+sub-96cfccb34513af55,True,True,False,False,True,True,Intermediate,No,Cingulate
+sub-9b228146210ba2fd,True,True,False,False,True,False,Difficult,Yes,Occipital
+sub-9d3a509e649ea8fb,True,True,True,True,True,True,Intermediate,Yes,Insular/Peri-insular (incl. operculum)
+sub-a39d5447a671e3e9,False,False,True,True,True,True,Difficult,Yes,Temporal
+sub-ae3fe1a4a998c926,False,False,True,True,True,True,Difficult,Yes,Multilobar
+sub-d041faf6d512673e,False,False,True,False,True,False,Difficult,Yes,Parietal
+sub-d1c0983f86951cd3,False,False,False,False,False,False,Difficult,Yes,Frontal
+sub-e0d219f4aabe99fb,True,True,True,True,True,True,Difficult,Yes,Frontal
+sub-e3e87c9a7ac60f6a,False,True,True,False,True,False,Difficult,Yes,Insular/Peri-insular (incl. operculum)
+sub-f6dee9bc1e60a282,True,True,False,False,True,True,Intermediate,Yes,Frontal

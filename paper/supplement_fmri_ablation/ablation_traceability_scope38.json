@@ -1,0 +1,80 @@
+{
+  "timestamp": "2026-03-07T13:02:37.942215",
+  "scope_subjects_tsv": "paper/revision/table3/final/table3_scope38_subject_ids.tsv",
+  "n_scope": 38,
+  "ablation_trace_json": "paper/supplement_fmri_ablation/ablation_traceability_real_deploy_fmrihemi.json",
+  "ablation_base_tsv": "paper/supplement_fmri_ablation/tableS_fmri_ablation_real_deploy_fmrihemi.tsv",
+  "table2_audit_json": "paper/table2/table2_audit.json",
+  "t1_eval_dir": "meld_data/output/three_level_eval/t1_baseline_val52/unbudgeted_ppv",
+  "t1_det_fail_definition": "Det(boxDSC>0.22)=False on the baseline T1 eval_dir, restricted to scope38",
+  "n_t1_det_fail_in_scope": 17,
+  "t1_det_fail_ids": [
+    "sub-0513d40b62f9192c",
+    "sub-06935058a1597d05",
+    "sub-1a478e36f3b3dc1c",
+    "sub-21abd0799375b3c2",
+    "sub-27ce7ce54b59b768",
+    "sub-313f1d0c8e4e3cc5",
+    "sub-464bb5d7fc05d087",
+    "sub-48d3884fb74a5df1",
+    "sub-538635a1d0cd21c3",
+    "sub-6edd439e8e6c0b37",
+    "sub-8840e64b19375335",
+    "sub-90b92bd52af88118",
+    "sub-a39d5447a671e3e9",
+    "sub-ae3fe1a4a998c926",
+    "sub-d041faf6d512673e",
+    "sub-d1c0983f86951cd3",
+    "sub-e3e87c9a7ac60f6a"
+  ],
+  "t1_ppv_fail_within_det_definition": "Det(PPV>=0.5)=False on the baseline T1 eval_dir, restricted to scope38 \u2229 {baseline Det(boxDSC>0.22)=False}",
+  "n_t1_ppv_fail_within_det_in_scope": 15,
+  "t1_ppv_fail_within_det_ids": [
+    "sub-0513d40b62f9192c",
+    "sub-06935058a1597d05",
+    "sub-1a478e36f3b3dc1c",
+    "sub-21abd0799375b3c2",
+    "sub-27ce7ce54b59b768",
+    "sub-313f1d0c8e4e3cc5",
+    "sub-48d3884fb74a5df1",
+    "sub-538635a1d0cd21c3",
+    "sub-8840e64b19375335",
+    "sub-90b92bd52af88118",
+    "sub-a39d5447a671e3e9",
+    "sub-ae3fe1a4a998c926",
+    "sub-d041faf6d512673e",
+    "sub-d1c0983f86951cd3",
+    "sub-e3e87c9a7ac60f6a"
+  ],
+  "t1_pin_fail_within_det_definition": "Pinpointing=False on the baseline T1 eval_dir, restricted to scope38 \u2229 {baseline Det(boxDSC>0.22)=False}",
+  "n_t1_pin_fail_within_det_in_scope": 14,
+  "t1_pin_fail_within_det_ids": [
+    "sub-0513d40b62f9192c",
+    "sub-06935058a1597d05",
+    "sub-1a478e36f3b3dc1c",
+    "sub-21abd0799375b3c2",
+    "sub-27ce7ce54b59b768",
+    "sub-313f1d0c8e4e3cc5",
+    "sub-48d3884fb74a5df1",
+    "sub-538635a1d0cd21c3",
+    "sub-8840e64b19375335",
+    "sub-90b92bd52af88118",
+    "sub-a39d5447a671e3e9",
+    "sub-ae3fe1a4a998c926",
+    "sub-d041faf6d512673e",
+    "sub-d1c0983f86951cd3"
+  ],
+  "outputs": {
+    "table_tsv": "paper/supplement_fmri_ablation/tableS_fmri_ablation_matrix_scope38.tsv",
+    "table_xlsx": "paper/supplement_fmri_ablation/Supplementary_table2_fmri_ablation_scope38.xlsx"
+  },
+  "ranking": {
+    "method": "average rank for ties; 1=best (largest rescue count)",
+    "metrics": [
+      "Rescue Det(boxDSC>0.22) among T1 Det(boxDSC) fails (n=17)",
+      "Rescue Det(PPV>=0.5) among T1 Det(PPV) fails within T1 Det(boxDSC) fails (n=15)",
+      "Rescue Pinpointing among T1 pinpointing fails within T1 Det(boxDSC) fails (n=14)"
+    ],
+    "mean_rank": "Mean rescue rank = mean of the three ranks"
+  }
+}

@@ -1,0 +1,11 @@
+# Runtime artifacts (reproducible)
+/outputs/
+/weights/downloaded/
+
+# Third-party clones (fetched by scripts; do not commit)
+/third_party/meld_graph/
+
+# Python caches
+**/__pycache__/
+*.pyc
+

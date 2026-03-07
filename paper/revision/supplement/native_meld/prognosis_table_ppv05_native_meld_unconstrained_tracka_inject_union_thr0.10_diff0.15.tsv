@@ -1,0 +1,5 @@
+Model	No output n/N (%)	Resection=Yes in ILAE12 n/N (%)	Resection=Yes in ILAE3456 n/N (%)	Adjusted aOR	95% CI	p
+MELD (native)	16/58 (27.6%)	20/38 (52.6%)	3/20 (15.0%)	6.13	[1.72, 28.6]	0.0024
+rs-fMRI	0/58 (0.0%)	8/38 (21.1%)	0/20 (0.0%)	8.4	[0.893, 1.12e+03]	0.0587
+Intersection	47/58 (81.0%)	8/38 (21.1%)	0/20 (0.0%)	17	[1.61, 2.4e+03]	0.0111
+TrackA (fusion, inject/union tuned)	0/58 (0.0%)	21/38 (55.3%)	2/20 (10.0%)	7.67	[2.03, 42.2]	0.0011

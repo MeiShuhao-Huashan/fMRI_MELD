@@ -1,0 +1,9 @@
+# Locked third-party dependency for end-to-end runs.
+#
+# This file is shell-sourceable (KEY=VALUE). It is intentionally minimal so that
+# reviewers can see exactly which upstream commit was used.
+MELD_GRAPH_REPO=https://github.com/MELDProject/meld_graph.git
+MELD_GRAPH_REF=68675f1c529ad89d6c559d846a1a39121da491bd
+MELD_GRAPH_TAG=2.2.0
+MELD_GRAPH_PATCH=third_party/patches/meld_graph.patch
+

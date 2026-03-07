@@ -1,0 +1,36 @@
+Characteristic	test	p
+Sex: Male	Fisher	0.0449
+Sex: Female	Fisher	0.0449
+Age at surgery (years)	Mann-Whitney	0.1339
+Epilepsy duration (years)	Mann-Whitney	0.4221
+Resection cavity volume (cm³)	Mann-Whitney	0.2989
+Follow-up duration (years)	Mann-Whitney	0.0732
+Seizure frequency: Daily	Fisher	0.2029
+Seizure frequency: Weekly	Fisher	0.3735
+Seizure frequency: Monthly	Fisher	0.0560
+SEEG: Yes	Fisher	0.1531
+SEEG: No	Fisher	0.1531
+Histopathology: FCD I	Fisher	1.0000
+Histopathology: FCD IIa	Fisher	0.2653
+Histopathology: FCD IIb	Fisher	0.1407
+Histopathology: Encephalomalacia	Fisher	1.0000
+Histopathology: Polymicrogyria	Fisher	1.0000
+Histopathology: Nonspecific	Fisher	1.0000
+Lesion side: Left	Fisher	0.7828
+Lesion side: Right	Fisher	0.7828
+Dominant RC location: Frontal	Fisher	1.0000
+Dominant RC location: Temporal	Fisher	0.6502
+Dominant RC location: Parietal	Fisher	0.7015
+Dominant RC location: Occipital	Fisher	1.0000
+Dominant RC location: Operculo-insular	Fisher	0.2899
+Dominant RC location: Central	Fisher	1.0000
+Dominant RC location: Cingulate	Fisher	0.5402
+Dominant RC location: Multilobar	Fisher	0.4866
+MRI detectability: Intermediate	Fisher	0.5595
+MRI detectability: Difficult	Fisher	0.5595
+Postop imaging: MRI	Fisher	0.6535
+Postop imaging: CT	Fisher	0.6535
+rs-fMRI Mean FD (mm)	Mann-Whitney	0.8636
+rs-fMRI Censor proportion	Mann-Whitney	1.0000
+rs-fMRI Standardized retained time (min)	Mann-Whitney	1.0000
+rs-fMRI Retained volumes (standardized)	Mann-Whitney	0.8699

@@ -1,0 +1,36 @@
+{
+  "audit_json": "paper/revision/table3/final/table3_scope38_audit.json",
+  "scope_subjects_tsv": "paper/revision/table3/final/table3_scope38_subject_ids.tsv",
+  "table3_scope38_md": "paper/revision/table3/final/table3_source_scope38_final.md",
+  "eval_dirs": {
+    "t1": "meld_data/output/three_level_eval/revision2026_clinical_response_trackAplus20_SELF5F/meld_native_surface",
+    "fmri": "meld_data/output/three_level_eval/revision2026_clinical_response_trackAplus20_SELF5F/fmri_parcelavg",
+    "trackA": "meld_data/output/three_level_eval/revision2026_clinical_response_trackAplus20_SELF5F/trackA_locked_paper_plus20"
+  },
+  "gate_csv": "meld_data/output/three_level_eval/trackA_v2_fmrihemi_inject2_tieredlow_thr0.5773_area60_a30_t80/all_folds_gate_decisions.csv",
+  "gate_thresholds": {
+    "t1_conf_thr": 0.5773,
+    "diff_thr": 0.15
+  },
+  "panelG": {
+    "n00": 7,
+    "n01_rescued": 10,
+    "n10_hurt": 1,
+    "n11": 20,
+    "mcnemar_p": 0.01171875
+  },
+  "primary_endpoint": "Det(boxDSC>0.22 & Dice>0.01)",
+  "figure_colors": {
+    "t1": "#2ca02c",
+    "fmri": "#1f77b4",
+    "trackA": "#9467bd",
+    "gt": "#d62728",
+    "overlap": "#ffbf00"
+  },
+  "outputs": {
+    "panelC_pdf": "paper/revision/figure2/panelC_deploy_gate_scope38.pdf",
+    "panelE_pdf": "paper/revision/figure2/panelE_cluster_effects_scope38.pdf",
+    "panelF_pdf": "paper/revision/figure2/panelF_subject_endpoints_scope38.pdf",
+    "panelG_pdf": "paper/revision/figure2/panelG_complementarity_scope38.pdf"
+  }
+}

@@ -1,0 +1,5 @@
+Model	No output n/N (%)	Resection=Yes in ILAE12 n/N (%)	Resection=Yes in ILAE3456 n/N (%)	Adjusted aOR	95% CI	p
+MELD (self-trained)	0/58 (0.0%)	22/38 (57.9%)	4/20 (20.0%)	4.78	[1.46, 18.5]	0.0049
+rs-fMRI	0/58 (0.0%)	10/38 (26.3%)	1/20 (5.0%)	4.34	[0.859, 43.6]	0.0556
+Intersection	29/58 (50.0%)	9/38 (23.7%)	0/20 (0.0%)	17.9	[1.77, 2.49e+03]	0.0075
+TrackA (fusion)	0/58 (0.0%)	23/38 (60.5%)	2/20 (10.0%)	10.3	[2.68, 58.8]	0.0002
