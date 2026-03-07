@@ -1,15 +1,15 @@
 # MELD_fMRI (Epilepsia) — reproducible archive + released code
 
 This folder (`release/meld-fmri-epilepsia-repro/`) is a **standalone public-release archive** for our manuscript
-results under `paper/revision/` *and* the corresponding released code (rs-fMRI model + TrackA fusion).
+results under `paper/revision/` *and* the corresponding released code (rs-fMRI model + Late fusion).
 
 It supports two complementary pathways:
 
 1) **Reviewer/reader pathway (recommended)** — reproduce the **paper tables/figures** from the **de-identified
    intermediate artifacts shipped here**. No raw MRI/fMRI data, no model weights, and no upstream MELD source code
    are required.
-2) **Researcher pathway (end-to-end; requires your own data)** — run our **rs-fMRI model** and **TrackA
-   post-hoc fusion/gating** on user-owned datasets, with upstream `meld_graph` treated as an external dependency.
+2) **Researcher pathway (end-to-end; requires your own data)** — run our **rs-fMRI model** and **Late fusion
+   post-hoc gating** on user-owned datasets, with upstream `meld_graph` treated as an external dependency.
 
 > If you only need the paper numbers, run `bash reproduce_all.sh` and skip the end-to-end sections.
 
@@ -20,14 +20,14 @@ It supports two complementary pathways:
 ### Included
 
 - `paper/` — final tables/figures used for the revision submission, plus supplementary material (including the rs-fMRI
-  ablation matrix and TrackA gate definition).
+  ablation matrix and Late fusion gate definition).
 - `scripts/` — scripts to regenerate those tables/figures **from the shipped intermediate artifacts**.
 - `meld_data/` — **minimal, de-identified intermediate CSV/JSON artifacts** needed for reproduction
   (no raw imaging; no large prediction HDF5 files).
 - `meld_fmri/` — released code:
   - `meld_fmri/fmri_gcn/` — rs-fMRI DeepEZ-style GCN/GAT implementation (+ laterality head)
-  - `meld_fmri/three_level_evaluation.py` — three-level evaluation utilities used by TrackA
-- `scripts/end_to_end/` — reference end-to-end entrypoints for training/inference/TrackA (requires your own data).
+  - `meld_fmri/three_level_evaluation.py` — three-level evaluation utilities used by Late fusion
+- `scripts/end_to_end/` — reference end-to-end entrypoints for training/inference/Late fusion (requires your own data).
 - `environment/` — conda environment export + linux-64 explicit lockfile for the **same environment name used in this
   project**: `MELD_fMRI`.
 - `third_party/` + `scripts/setup_third_party.sh` — pinned upstream `meld_graph` commit + an idempotent patch workflow.
@@ -155,12 +155,12 @@ This script checks that:
 
 ---
 
-## Pathway 2 — end-to-end rs-fMRI model + TrackA fusion (requires your own data)
+## Pathway 2 — end-to-end rs-fMRI model + Late fusion (requires your own data)
 
 This pathway publishes the **code** needed to run:
 - the rs-fMRI lesion model (DeepEZ-style GCN/GAT),
-- the rs-fMRI laterality model used by TrackA,
-- TrackA gating + fusion + three-level evaluation.
+- the rs-fMRI laterality model used by Late fusion,
+- Late fusion gating + three-level evaluation.
 
 It requires:
 - Your own dataset (raw or preprocessed) and any local ground-truth labels you want for training/evaluation.
@@ -221,7 +221,7 @@ Per-subject `*.npz` files may contain:
   - per-node local features used by some fusion variants (FiLM / dual-expert) and by the paper laterality model
 - `hemi` (required for laterality training) — string (`"L"` or `"R"`)
 
-Important: **TrackA (paper implementation) assumes the Brainnetome cortical layout** (105 parcels per hemisphere) and
+Important: **Late fusion (paper implementation) assumes the Brainnetome cortical layout** (105 parcels per hemisphere) and
 the “S26/V2” ordering described in `paper/supplement_methods/SUPPLEMENTARY_METHODS_trackA_gate.md`. If you use a
 different atlas or node schema, you will need to adapt `scripts/end_to_end/run_trackA_v2_fmrihemi_takeover_three_level_eval.py`.
 
@@ -273,9 +273,9 @@ python scripts/end_to_end/predict_deepez_gcn.py \
   --out_dir /path/to/v2_dir/fold_00/val_predictions
 ```
 
-### 2.4 rs-fMRI laterality model (for TrackA) — training and inference
+### 2.4 rs-fMRI laterality model (for Late fusion) — training and inference
 
-TrackA requires an rs-fMRI-only laterality CSV per fold with columns:
+Late fusion requires an rs-fMRI-only laterality CSV per fold with columns:
 `subject_id, prob_right, pred_hemi`.
 
 #### Train laterality model (single fold)
@@ -322,11 +322,11 @@ If you do not download weights, you can still run end-to-end by training models 
 
 ---
 
-## TrackA end-to-end (requires MELD_graph outputs)
+## Late fusion end-to-end (requires MELD_graph outputs)
 
 ### 3.0 What you need prepared
 
-To run TrackA **as implemented in the paper**, you need (per fold):
+To run Late fusion **as implemented in the paper**, you need (per fold):
 
 1) **T1 out-of-fold predictions** from MELD_graph:
    - a `predictions_val.hdf5` file per fold (validation subjects only)
@@ -337,14 +337,14 @@ To run TrackA **as implemented in the paper**, you need (per fold):
 4) **rs-fMRI lesion probabilities**:
    - per-subject `.npz` with `p` under `v2_dir/fold_XX/val_predictions/` (Section 2.3)
 5) **Lesion labels (for evaluation)**:
-   - `--lesion_root` pointing to MELD-style derived lesion labels (fsaverage_sym/xhemi-on-lh space)
+  - `--lesion_root` pointing to MELD-style derived lesion labels (fsaverage_sym/xhemi-on-lh space).
 
 ### 3.1 Recommended directory layout (example)
 
-You can use any layout, but the TrackA script is easiest to run if you structure your paths like:
+You can use any layout, but the Late fusion script is easiest to run if you structure your paths like:
 
 ```
-/path/to/trackA_inputs/
+/path/to/late_fusion_inputs/
   t1/
     fold_00/predictions_val.hdf5
     fold_00/data_parameters.json
@@ -359,7 +359,7 @@ You can use any layout, but the TrackA script is easiest to run if you structure
     ...
 ```
 
-### 3.2 Run TrackA (paper Route A: threshold gate + tiered injection)
+### 3.2 Run Late fusion (paper Route A: threshold gate + tiered injection)
 
 The implementation-level gate definition is in:
 - `paper/supplement_methods/SUPPLEMENTARY_METHODS_trackA_gate.md`
@@ -368,11 +368,11 @@ Reference command (edit paths to your filesystem):
 ```bash
 python scripts/end_to_end/run_trackA_v2_fmrihemi_takeover_three_level_eval.py \
   --name trackA_v2_fmrihemi_inject2_tieredlow \
-  --v2_dir /path/to/trackA_inputs/fmri_v2 \
+  --v2_dir /path/to/late_fusion_inputs/fmri_v2 \
   --lesion_root /path/to/your/meld_data/derived_labels/lesion_main_island/template_fsaverage_sym_xhemi \
-  --t1_pred_hdf5_template '/path/to/trackA_inputs/t1/fold_{fold:02d}/predictions_val.hdf5' \
-  --split_json_template '/path/to/trackA_inputs/t1/fold_{fold:02d}/data_parameters.json' \
-  --laterality_csv_template '/path/to/trackA_inputs/laterality/fold_{fold:02d}/val_predictions.csv' \
+  --t1_pred_hdf5_template '/path/to/late_fusion_inputs/t1/fold_{fold:02d}/predictions_val.hdf5' \
+  --split_json_template '/path/to/late_fusion_inputs/t1/fold_{fold:02d}/data_parameters.json' \
+  --laterality_csv_template '/path/to/late_fusion_inputs/laterality/fold_{fold:02d}/val_predictions.csv' \
   --t1_conf_threshold 0.5773 \
   --area_target_cm2 60 \
   --area_max_cluster_cm2 30 \
@@ -389,7 +389,7 @@ python scripts/end_to_end/run_trackA_v2_fmrihemi_takeover_three_level_eval.py \
   --fold all
 ```
 
-### 3.3 TrackA outputs
+### 3.3 Late fusion outputs
 
 By default, the script writes results to:
 - `meld_data/output/three_level_eval/<name>_thr..._area..._a..._t.../`
@@ -422,30 +422,3 @@ Aggregated across folds (written when `--fold all`):
 
 - License: MIT (`LICENSE`)
 - Citation metadata: `CITATION.cff`
-
----
-
-## 中文说明（详细）
-
-本文件夹（`release/meld-fmri-epilepsia-repro/`）是一个可独立发布的**公开复现包**，包含：
-
-- 论文最终表格/补充材料（`paper/`）
-- 复现脚本（`reproduce_all.sh` + `scripts/`）
-- 我们自己实现的 rs-fMRI 模型代码与 TrackA 后融合/门控代码（`meld_fmri/` + `scripts/end_to_end/`）
-
-### 复现论文表格（不需要原始影像）
-
-```bash
-conda env create -f environment/MELD_fMRI_env_export.yml
-conda activate MELD_fMRI
-bash reproduce_all.sh
-```
-
-### 端到端跑 rs-fMRI 模型与 TrackA（需要你自己的数据）
-
-核心思想是：先准备好 rs-fMRI 的 `cache_root`（图结构 + 每个受试者的 `.npz` 特征），再用
-`train_deepez_gcn.py / predict_deepez_gcn.py` 得到每个受试者的 node 概率输出；同时训练/推理 laterality
-分类器得到 `prob_right/pred_hemi`；最后在已经有 MELD_graph 的 T1 输出（`predictions_val.hdf5`）的前提下，
-运行 `run_trackA_v2_fmrihemi_takeover_three_level_eval.py` 完成 TrackA 融合并输出三层评估 CSV。
-
-建议你按上面的英文步骤逐条执行；关键输入/输出的目录结构与命令都已写明。
