@@ -1,6 +1,6 @@
 # MELD_fMRI — reproducible archive + released code
 
-This folder (`release/meld-fmri-epilepsia-repro/`) is a **standalone public-release archive** for our manuscript
+This folder is a **standalone public-release archive** for our manuscript
 results under `paper/revision/` *and* the corresponding released code (rs-fMRI model + Late fusion).
 
 It supports two complementary pathways:
